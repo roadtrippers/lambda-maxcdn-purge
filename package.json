@@ -1,0 +1,32 @@
+{
+  "name": "lambda-maxcdn-purge",
+  "version": "1.0.0",
+  "description": "A Lambda function that purges a resource from MaxCDN when a change to it occurs",
+  "engines": {
+    "node": ">=4.3"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/servicescout/lambda-maxcdn-purge.git"
+  },
+  "keywords": [
+    "aws",
+    "lambda",
+    "s3",
+    "maxcdn"
+  ],
+  "author": "Blaine Jester",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/servicescout/lambda-maxcdn-purge/issues"
+  },
+  "homepage": "https://github.com/servicescout/lambda-maxcdn-purge#readme",
+  "dependencies": {
+    "config": "^1.21.0",
+    "maxcdn": "^0.2.1"
+  }
+}

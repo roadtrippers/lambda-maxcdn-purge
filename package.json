@@ -1,7 +1,7 @@
 {
   "name": "lambda-maxcdn-purge",
   "version": "1.0.0",
-  "description": "A Lambda function that purges a resource from MaxCDN when a change to it occurs",
+  "description": "A Lambda function that purges a resource from MaxCDN when an S3 event occurs",
   "engines": {
     "node": ">=4.3"
   },

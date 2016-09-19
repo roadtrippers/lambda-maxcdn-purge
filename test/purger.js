@@ -228,7 +228,7 @@ describe('Purger', function()
         callback(null, 'results');
       });
       
-      return purger.purge('data').should.eventually.equal('results');
+      return purger.purge('data').should.eventually.deep.equal([ 'results' ]);
     });
   });
 });

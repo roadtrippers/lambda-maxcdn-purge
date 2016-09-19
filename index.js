@@ -11,7 +11,7 @@ const purger = new Purger(new MaxCDN(
   config.get('maxcdn.company_alias'),
   config.get('maxcdn.key'),
   config.get('maxcdn.secret')
-), config);
+), config, console.log.bind(console));
 
 module.exports.handler = function(event, context)
 {
@@ -19,12 +19,12 @@ module.exports.handler = function(event, context)
   { 
     return purger.purge(record)
       .then(
-        results => { console.log(`Successfully purged '${results.pop()}'`) }, 
+        results => { console.log(`Successfully purged ${results.length} files`) }, 
         error => { console.error(error) }
       ); 
   }))
     .then(
       () => { context.succeed() }, 
-      () => { context.fail() }
+      error => { context.fail(error) }
     );
 };

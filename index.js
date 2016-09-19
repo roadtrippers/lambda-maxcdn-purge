@@ -7,7 +7,7 @@ const MaxCDN = require('maxcdn');
 const Purger = require('./lib/purger');
 
 // Instances
-const purger = new Purger(MaxCDN.create(
+const purger = new Purger(new MaxCDN(
   config.get('maxcdn.company_alias'),
   config.get('maxcdn.key'),
   config.get('maxcdn.secret')
@@ -19,7 +19,7 @@ module.exports.handler = function(event, context)
   { 
     return purger.purge(record)
       .then(
-        results => { console.log(`Successfully purged ${results.pop()}`) }, 
+        results => { console.log(`Successfully purged '${results.pop()}'`) }, 
         error => { console.error(error) }
       ); 
   }))

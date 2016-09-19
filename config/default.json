@@ -3,5 +3,7 @@
     "company_alias": "",
     "key": "",
     "secret": ""
-  }
+  },
+  "zone_map": [],
+  "purge_timeout": 120
 }

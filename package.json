@@ -7,7 +7,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha test"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,14 @@
   "homepage": "https://github.com/servicescout/lambda-maxcdn-purge#readme",
   "dependencies": {
     "config": "^1.21.0",
-    "maxcdn": "^0.2.1"
+    "maxcdn": "^0.2.1",
+    "validate": "^3.0.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^5.3.0",
+    "mocha": "^3.0.2",
+    "sinon": "^1.17.6",
+    "sinon-chai": "^2.8.0"
   }
 }

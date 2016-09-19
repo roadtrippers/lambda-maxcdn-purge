@@ -1,0 +1,16 @@
+{
+  "s3": {
+    "bucket": {
+      "name": {
+        "type": "string",
+        "required": true
+      }
+    },
+    "object": {
+      "key": {
+        "type": "string",
+        "required": true
+      }
+    }
+  }
+}
